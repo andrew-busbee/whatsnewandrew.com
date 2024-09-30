@@ -10,8 +10,6 @@ services:
     environment:
       - PLUGIN_INSTALLER=true
       - ENABLE_XFRAME=false #set to true to block using iframes
-    healthcheck:
-      test: wget --no-verbose --tries=3 --spider http://localhost:${PORT}/ || exit 1
     restart: always
     
 volumes:
